@@ -15,7 +15,7 @@ const HeaderWrapper = styled.header`
 `;
 
 const Menu = styled.nav`
-  display: block;
+  display: ${(p) => (p.open ? "block" : "none")};
   font-family: "Open Sans";
   position: absolute;
   width: 100%;
@@ -80,16 +80,14 @@ export default function Header() {
         <div />
         <div />
       </MobileMenuIcon>
-      {menuOpen ? (
-        <Menu>
-          <StyledLink to="/" isActive={pathname === "/"}>
-            Home
-          </StyledLink>
-          <StyledLink to="/login" isActive={pathname === "/login"}>
-            Login
-          </StyledLink>
-        </Menu>
-      ) : null}
+      <Menu open={menuOpen}>
+        <StyledLink to="/" isActive={pathname === "/"}>
+          Home
+        </StyledLink>
+        <StyledLink to="/login" isActive={pathname === "/login"}>
+          Login
+        </StyledLink>
+      </Menu>
     </HeaderWrapper>
   );
 }

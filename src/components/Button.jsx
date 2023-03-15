@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Button = styled.button`
   color: white;
-  background: ${(p) => (p.variant === "primary" ? "#f8049c" : "yellow")};
+  background: ${(p) => (p.variant === "primary" ? "#f8049c" : "#fdd54f")};
   font-weight: bold;
   border-radius: 4px;
   box-shadow: none;
@@ -10,13 +10,14 @@ export const Button = styled.button`
   width: 100%;
   display: block;
   white-space: none;
+  cursor: pointer;
 
   ${(p) =>
-    p.variant === "large"
+    p.large
       ? css`
           padding: 10px;
           border-radius: 5px;
-          font-size: 1.5em;
+          font-size: 1.3em;
         `
       : css`
           padding: 8px;

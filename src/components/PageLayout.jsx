@@ -17,7 +17,7 @@ const Content = styled.main`
   }
 `;
 
-export default function PageLayout(props) {
+export function PageLayout(props) {
   return (
     <>
       <Header />
