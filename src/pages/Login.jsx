@@ -16,6 +16,14 @@ const Form = styled.form`
     text-align: center;
     margin: 5px 0;
   }
+
+  ${Button}:first-of-type {
+    margin-top: 40px;
+  }
+
+  ${Input}:first-of-type {
+    margin-top: 20px;
+  }
 `;
 let timeout;
 
@@ -55,6 +63,7 @@ export default function Login() {
     <PageLayout>
       <h1>Login</h1>
       <Form onSubmit={handleSubmit}>
+        <span>Login if you have account</span>
         {loading ? (
           <Spinner></Spinner>
         ) : (

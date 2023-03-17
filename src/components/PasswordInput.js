@@ -29,6 +29,7 @@ const TobbleButton = styled.div`
   cursor: pointer;
   user-select: none;
   color: black;
+  margin-top: 20px;
 `;
 
 export const PasswordInput = (props) => {
